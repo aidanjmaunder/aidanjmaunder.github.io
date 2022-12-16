@@ -5,7 +5,7 @@ import { Container, Text } from '@chakra-ui/react'
 
 const About = () => {
   return (
-    <Container maxW='1600px' minH='calc(40vh)' display='flex' alignItems='center'>
+    <Container alignItems='center' display='flex' minH='calc(40vh)' maxW='1600px'>
       <Text fontSize='lg'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis pulvinar mi, nec
         pulvinar ex imperdiet id. Nulla consectetur arcu a lobortis euismod. Suspendisse dictum nibh

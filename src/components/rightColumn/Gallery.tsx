@@ -5,11 +5,11 @@ import { Box, Container, Image, Stack } from '@chakra-ui/react'
 
 const Gallery = () => {
   return (
-    <Container maxW='1600px' alignItems='center'>
-      <Box w='100%' py={6}>
+    <Container alignItems='center' maxW='1600px'>
+      <Box py={6} w='100%'>
         <Image src='./images/dashboard.png' alt='dashboard concept' />
       </Box>
-      <Stack w='100%' direction={['column', 'row']} spacing='6' flex='1'>
+      <Stack direction={['column', 'row']} flex='1' spacing='6' w='100%'>
         <Box>
           <Image src='./images/light-library.png' alt='music player - library - light theme' />
         </Box>

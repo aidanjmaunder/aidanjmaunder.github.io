@@ -1,6 +1,43 @@
 .app {
-  background-color: #1d2129;
-  min-height: 100vh;
+  color: #fff;
   font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #1d2129;
+}
+
+/* left panel */
+
+.leftPanel {
+  background: #15171c;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* header */
+
+.networks {
+  width: 180px;
+  font-size: 26px;
+}
+
+.networks a {
+  opacity: 0.8;
+}
+
+.networks a:hover {
+  color: #73a9c4;
+  opacity: 1;
+}
+
+/* badge */
+
+a.badge {
+  background: #1d2129;
+  border-radius: 2px;
+}
+
+a.badge:hover {
+  text-decoration: none;
+  background: #73a9c4;
 }

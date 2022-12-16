@@ -46,19 +46,19 @@ const ContactForm = () => {
   }
 
   return (
-    <Container maxW='1600px' minH='calc(50vh)' display='flex' alignItems='center'>
+    <Container alignItems='center' display='flex' maxW='1600px' minH='calc(50vh)'>
       <AnimatePresence>
         {emailSent ? (
           <Container centerContent>
             <motion.div
-              key='submitted'
-              initial={{ y: '120%', opacity: 0, scale: 1 }}
               animate={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.8, ease: 'easeOut' }}
+              initial={{ y: '120%', opacity: 0, scale: 1 }}
+              key='submitted'
+              transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' }}
             >
               <VStack spacing={6}>
                 <FontAwesomeIcon icon={faCircleCheck} />
-                <Heading as='h3' size='lg' textAlign='center' fontWeight={500}>
+                <Heading as='h3' fontWeight={500} size='lg' textAlign='center'>
                   Your message has been sent.
                 </Heading>
               </VStack>
@@ -67,43 +67,42 @@ const ContactForm = () => {
         ) : (
           <FormControl
             as='form'
-            ref={form}
-            onSubmit={handleSubmit(sendEmail)}
             isInvalid={errors ? true : false}
+            onSubmit={handleSubmit(sendEmail)}
+            ref={form}
           >
             <motion.div
-              key='form'
-              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.4, ease: 'easeIn' }}
               exit={{ opacity: 0, transition: { duration: 0.2, ease: 'easeOut' } }}
+              initial={{ opacity: 0 }}
+              key='form'
+              transition={{ delay: 0.6, duration: 0.4, ease: 'easeIn' }}
             >
-              <VStack spacing={4} align='stretch'>
-                <Heading as='h3' size='lg' fontWeight={500}>
+              <VStack align='stretch' spacing={4}>
+                <Heading as='h3' fontWeight={500} size='lg'>
                   Contact Me
                 </Heading>
 
                 <InputGroup>
                   <InputLeftElement
-                    pointerEvents='none'
                     children={<FontAwesomeIcon icon={faUser} />}
+                    pointerEvents='none'
                   />
                   <Input
-                    type='text'
                     {...register('from_name', { required: true })}
-                    placeholder='Name'
                     isInvalid={errors.from_name ? true : false}
+                    placeholder='Name'
+                    type='text'
                   />
                 </InputGroup>
                 {errors.from_name && <FormErrorMessage>Your name is required</FormErrorMessage>}
 
                 <InputGroup>
                   <InputLeftElement
-                    pointerEvents='none'
                     children={<FontAwesomeIcon icon={faEnvelope} />}
+                    pointerEvents='none'
                   />
                   <Input
-                    type='email'
                     {...register('from_email', {
                       required: true,
                       pattern: {
@@ -111,8 +110,9 @@ const ContactForm = () => {
                         message: 'invalid email address',
                       },
                     })}
-                    placeholder='Email'
                     isInvalid={errors.from_email ? true : false}
+                    placeholder='Email'
+                    type='email'
                   />
                 </InputGroup>
                 {errors.from_email && (
@@ -121,8 +121,8 @@ const ContactForm = () => {
 
                 <Textarea
                   {...register('message', { required: true })}
-                  placeholder='Message'
                   isInvalid={errors.message ? true : false}
+                  placeholder='Message'
                 />
                 {errors.message && <FormErrorMessage>A message is required</FormErrorMessage>}
 
