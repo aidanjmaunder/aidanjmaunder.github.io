@@ -51,11 +51,11 @@ a.badge:hover {
 
 /* about */
 
-#about networks a {
+#about a {
   text-decoration: underline;
 }
 
-#about networks a:hover {
+#about a:hover {
   color: #558da8;
 }
 

@@ -1,18 +1,7 @@
 import React from 'react'
 
 /* libraries */
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  Stack,
-  Text,
-  VStack,
-} from '@chakra-ui/react'
+import { Box, Container, Divider, Grid, Heading, Image, Text, VStack } from '@chakra-ui/react'
 
 const Gallery = () => {
   return (
