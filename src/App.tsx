@@ -9,21 +9,14 @@ import Gallery from './components/rightColumn/Gallery'
 import ContactForm from './components/rightColumn/ContactForm'
 
 /* libraries */
-import {
-  Box,
-  chakra,
-  ChakraProvider,
-  extendTheme,
-  Flex,
-  shouldForwardProp,
-  useMediaQuery,
-} from '@chakra-ui/react'
+import { Box, chakra, ChakraProvider, extendTheme, Flex, shouldForwardProp } from '@chakra-ui/react'
 import { motion, isValidMotionProp } from 'framer-motion'
 import Skills from './components/leftColumn/Skills'
+import About from './components/rightColumn/About'
 
 const fonts = {
   heading: `'Libre Baskerville', serif`,
-  body: `'Roboto', sans-serif`,
+  body: `'Lato', sans-serif`,
 }
 
 const theme = extendTheme({ fonts })
@@ -69,6 +62,7 @@ function App() {
             initial={{ opacity: 0, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.4, ease: 'easeIn' }}
           >
+            <About />
             <Gallery />
           </motion.div>
           <ContactForm />

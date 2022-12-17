@@ -1,25 +1,68 @@
 import React from 'react'
 
 /* libraries */
-import { Container, Text } from '@chakra-ui/react'
+import { Container, Divider, Flex, Heading, Link, Show, Text, VStack } from '@chakra-ui/react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAnglesDown } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
   return (
-    <Container alignItems='center' display='flex' minH='calc(40vh)' maxW='1600px'>
-      <Text fontSize='lg'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis pulvinar mi, nec
-        pulvinar ex imperdiet id. Nulla consectetur arcu a lobortis euismod. Suspendisse dictum nibh
-        eu massa imperdiet malesuada. Curabitur eget aliquet nulla, tincidunt tincidunt purus. Etiam
-        consectetur in justo at porta. Sed nec dui commodo, aliquet augue sit amet, sagittis quam.
-        Nullam suscipit venenatis quam, non maximus est aliquet vitae. Morbi eu vestibulum nisl.
-        Etiam aliquet turpis arcu, a posuere magna luctus eu. Phasellus quam nunc, interdum eget
-        placerat finibus, suscipit quis massa. Etiam mattis convallis enim, id bibendum enim posuere
-        eget. Aenean porta enim et justo faucibus rutrum. Fusce porta vulputate ante interdum
-        faucibus. Donec tempor ex nisi, sed pretium nisi mattis in. Mauris maximus odio vitae turpis
-        mattis, vitae ultrices nisl consequat. Donec tristique ultrices nulla, in consequat enim
-        congue nec.
-      </Text>
-    </Container>
+    <>
+      <Container
+        alignItems='center'
+        id='about'
+        display='flex'
+        minH={{ base: 'auto', lg: 'calc(90vh - 1rem)' }}
+        maxW='1600px'
+        py={{ base: 8, lg: 2 }}
+      >
+        <VStack spacing={4}>
+          <Heading as='h3' fontWeight={500} size='xl' textAlign='center'>
+            Hello, I'm aidan
+          </Heading>
+          <Heading
+            as='h4'
+            fontFamily='Lato, sans-serif'
+            fontSize={{ base: 'sm', lg: 'md' }}
+            fontWeight={400}
+            opacity={0.5}
+            textAlign='center'
+          >
+            Front End Developer / Web & UI Designer / Hobbyist Game Developer
+          </Heading>
+          <Divider maxW={200} opacity={0.2} />
+          <Text fontSize={{ base: 'sm', lg: 'lg' }} textAlign='center'>
+            I started out as a freelance designer over 10 years ago. I have been working in agencies
+            primarily on SaaS products for the last sevenish years. I'm very passionate about
+            creating clean and easy to use interfaces. Lately I've been developling primarily with
+            React and designing via Figma.
+          </Text>
+          <Text fontSize={{ base: 'sm', lg: 'lg' }} textAlign='center'>
+            I'm also a hobbyist game developer that dabbles with building small traditional
+            roguelikes, platformers, and puzzle games. I generally use{' '}
+            <Link href='https://godotengine.org/' isExternal>
+              Godot
+            </Link>{' '}
+            and{' '}
+            <Link
+              href='https://python-tcod.readthedocs.io/en/latest/tcod/getting-started.html'
+              isExternal
+            >
+              python-tcod.
+            </Link>
+          </Text>
+          <Text fontSize={{ base: 'sm', lg: 'lg' }} textAlign='center'>
+            In my downtime you can usually find me playing hockey, writing music, or out on a trail
+            with my dogs or my bike.
+          </Text>
+        </VStack>
+      </Container>
+      <Show above='lg'>
+        <Flex flexDirection='column' justifyContent='center' minH='calc(10vh - 1rem)'>
+          <FontAwesomeIcon icon={faAnglesDown} />
+        </Flex>
+      </Show>
+    </>
   )
 }
 

@@ -5,12 +5,14 @@ import emailjs from '@emailjs/browser'
 import {
   Button,
   Container,
+  Divider,
   FormControl,
   FormErrorMessage,
   Heading,
   Input,
   InputGroup,
   InputLeftElement,
+  Text,
   Textarea,
   VStack,
 } from '@chakra-ui/react'
@@ -30,7 +32,6 @@ const ContactForm = () => {
   } = useForm()
 
   const sendEmail = () => {
-    console.log('fired')
     setEmailSent(true)
 
     emailjs
@@ -46,7 +47,14 @@ const ContactForm = () => {
   }
 
   return (
-    <Container alignItems='center' display='flex' maxW='1600px' minH='calc(50vh)'>
+    <Container
+      alignItems='center'
+      display='flex'
+      id='contact'
+      maxW='1600px'
+      minH={{ base: 'auto', lg: 'calc(100vh - 2rem)' }}
+      py={{ base: 20, lg: 2 }}
+    >
       <AnimatePresence>
         {emailSent ? (
           <Container centerContent>
@@ -79,10 +87,13 @@ const ContactForm = () => {
               transition={{ delay: 0.6, duration: 0.4, ease: 'easeIn' }}
             >
               <VStack align='stretch' spacing={4}>
-                <Heading as='h3' fontWeight={500} size='lg'>
+                <Heading as='h3' fontWeight={500} size='lg' textAlign='center'>
                   Contact Me
                 </Heading>
-
+                <Text fontSize='md' opacity={0.5} textAlign='center'>
+                  Feel free to reach out and I'll get back to you as soon as possible.
+                </Text>
+                <Divider alignSelf='center' maxW={200} opacity={0.2} />
                 <InputGroup>
                   <InputLeftElement
                     children={<FontAwesomeIcon icon={faUser} />}
@@ -126,7 +137,7 @@ const ContactForm = () => {
                 />
                 {errors.message && <FormErrorMessage>A message is required</FormErrorMessage>}
 
-                <Button colorScheme='blue' type='submit' value='Send'>
+                <Button type='submit' value='Send'>
                   Submit
                 </Button>
               </VStack>

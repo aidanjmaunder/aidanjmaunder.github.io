@@ -16,6 +16,11 @@
 
 /* header */
 
+a.logo:hover {
+  color: #558da8;
+  text-decoration: none;
+}
+
 .networks {
   width: 180px;
   font-size: 26px;
@@ -26,7 +31,7 @@
 }
 
 .networks a:hover {
-  color: #73a9c4;
+  color: #558da8;
   opacity: 1;
 }
 
@@ -39,5 +44,33 @@ a.badge {
 
 a.badge:hover {
   text-decoration: none;
-  background: #73a9c4;
+  background: #558da8;
+}
+
+/* right panel */
+
+/* about */
+
+#about networks a {
+  text-decoration: underline;
+}
+
+#about networks a:hover {
+  color: #558da8;
+}
+
+/* contact form */
+
+#contact input,
+#contact textarea,
+#contact button {
+  border-radius: 2px;
+}
+
+#contact button {
+  background: #15171c;
+}
+
+#contact button:hover {
+  background: #558da8;
 }

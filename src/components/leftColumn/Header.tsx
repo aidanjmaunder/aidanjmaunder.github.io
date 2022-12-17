@@ -9,12 +9,14 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 const Header = () => {
   return (
     <Flex as='header' flexDirection='column' mb={8}>
-      <Heading as='h1' fontWeight={500} size='xl' textAlign='center'>
-        aidan maunder
-      </Heading>
+      <Link className='logo' href='#about'>
+        <Heading as='h1' fontWeight={500} size='xl' textAlign='center'>
+          aidan maunder
+        </Heading>
+      </Link>
       <Divider my={2} opacity={0.2} />
       <Flex alignSelf='center' className='networks' justifyContent='space-around'>
-        <Link href='#'>
+        <Link href='#contact'>
           <FontAwesomeIcon icon={faEnvelope} />
         </Link>
         <Link href='https://github.com/aidanjmaunder' isExternal>
