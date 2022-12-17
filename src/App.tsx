@@ -32,7 +32,6 @@ const variants = {
 
 function App() {
   const viewportWidth = window.innerWidth
-  console.log(viewportWidth)
 
   return (
     <ChakraProvider theme={theme}>
