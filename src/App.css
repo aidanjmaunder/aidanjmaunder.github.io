@@ -62,15 +62,22 @@ a.badge:hover {
 /* contact form */
 
 #contact input,
-#contact textarea,
-#contact button {
+#contact textarea {
+  border: 1px solid #fff;
   border-radius: 2px;
 }
 
 #contact button {
   background: #15171c;
+  border-radius: 2px;
 }
 
 #contact button:hover {
   background: #558da8;
+}
+
+#contact input:focus-visible,
+#contact textarea:focus-visible,
+#contact button:focus-visible {
+  box-shadow: 0 0 0 3px #558da8;
 }

@@ -93,7 +93,7 @@ const ContactForm = () => {
                 <Text fontSize='md' opacity={0.5} textAlign='center'>
                   Feel free to reach out and I'll get back to you as soon as possible.
                 </Text>
-                <Divider alignSelf='center' maxW={200} opacity={0.2} />
+                <Divider alignSelf='center' borderColor='#6a6a6a' maxW={200} opacity={1} />
                 <InputGroup>
                   <InputLeftElement
                     children={<FontAwesomeIcon icon={faUser} />}

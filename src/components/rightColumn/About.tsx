@@ -30,7 +30,7 @@ const About = () => {
           >
             Front End Developer / Web & UI Designer / Hobbyist Game Developer
           </Heading>
-          <Divider maxW={200} opacity={0.2} />
+          <Divider maxW={200} borderColor='#6a6a6a' opacity={1} />
           <Text fontSize={{ base: 'sm', lg: 'lg' }} textAlign='center'>
             I started out as a freelance designer over 10 years ago. I have been working in agencies
             primarily on SaaS products for the last sevenish years. I'm very passionate about

@@ -104,7 +104,7 @@ const Skills = () => {
         Skills & Technologies
       </Heading>
 
-      <Divider my={2} opacity={0.2} />
+      <Divider my={2} borderColor='#2d3035' opacity={1} />
 
       <Grid
         gap={3}

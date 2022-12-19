@@ -10,7 +10,7 @@ const Gallery = () => {
         <Heading as='h3' fontWeight={500} size='lg'>
           UI Concepts
         </Heading>
-        <Divider maxW={200} opacity={0.2} />
+        <Divider maxW={200} borderColor='#6a6a6a' opacity={1} />
       </VStack>
 
       <VStack spacing={{ base: 12, lg: 20 }}>
@@ -21,9 +21,9 @@ const Gallery = () => {
           <Text w='100%' fontSize='sm'>
             Music Listening History
           </Text>
-          <Divider my={2} opacity={0.06} />
+          <Divider my={2} borderColor='#6a6a6a' opacity={1} />
           <Image src='./images/dashboard.png' alt='dashboard concept' my={2} />
-          <Divider my={2} opacity={0.06} />
+          <Divider my={2} borderColor='#6a6a6a' opacity={1} />
         </Box>
 
         <Box>
@@ -33,14 +33,14 @@ const Gallery = () => {
           <Text w='100%' fontSize='sm'>
             Music Player
           </Text>
-          <Divider my={2} opacity={0.06} />
+          <Divider my={2} borderColor='#6a6a6a' opacity={1} />
           <Grid templateColumns={{ base: 'repeat(2, 1fr)', '2xl': 'repeat(4, 1fr)' }} gap={6}>
             <Image src='./images/light-library.png' alt='music player - library - light theme' />
             <Image src='./images/light-playing.png' alt='music player - playing - light theme' />
             <Image src='./images/dark-library.png' alt='music player - library - dark theme' />
             <Image src='./images/dark-playing.png' alt='music player - library - dark theme' />
           </Grid>
-          <Divider my={2} opacity={0.06} />
+          <Divider my={2} borderColor='#6a6a6a' opacity={1} />
         </Box>
       </VStack>
     </Container>

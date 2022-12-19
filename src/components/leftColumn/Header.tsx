@@ -14,7 +14,7 @@ const Header = () => {
           aidan maunder
         </Heading>
       </Link>
-      <Divider my={2} opacity={0.2} />
+      <Divider my={2} borderColor='#2d3035' opacity={1} />
       <Flex alignSelf='center' className='networks' justifyContent='space-around'>
         <Link href='#contact'>
           <FontAwesomeIcon icon={faEnvelope} />
