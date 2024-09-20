@@ -32,7 +32,7 @@ const About = () => {
           </Heading>
           <Divider maxW={200} borderColor='#6a6a6a' opacity={1} />
           <Text fontSize={{ base: 'sm', lg: 'lg' }} textAlign='center'>
-            I started out as a freelance designer over 10 years ago. I have been working in agencies
+            I started out as a freelance designer over 14 years ago. I have been working in agencies
             primarily on SaaS products for the last sevenish years. I'm very passionate about
             creating clean and easy to use interfaces. Lately I've been developling primarily with
             React and designing via Figma.
